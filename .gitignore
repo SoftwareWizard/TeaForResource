@@ -6,6 +6,10 @@
 *.user
 *.sln.docstates
 
+# Generated Files
+*.generated.cs
+*.generated.ts
+
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/

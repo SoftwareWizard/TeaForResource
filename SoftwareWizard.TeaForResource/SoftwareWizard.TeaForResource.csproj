@@ -47,7 +47,6 @@
       <DependentUpon>ResourceKeys.tt</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Resources\Error\Error.de.resx" />
     <EmbeddedResource Include="Resources\Error\Error.fr.resx" />
@@ -70,9 +69,20 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ResourceKeys.generated.cs</LastGenOutput>
     </Content>
+    <Content Include="Typescript\text.resources.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>text.resources.generated.ts</LastGenOutput>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Typescript\text.resources.generated.ts">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>text.resources.tt</DependentUpon>
+    </TypeScriptCompile>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
