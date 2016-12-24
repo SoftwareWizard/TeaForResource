@@ -31,7 +31,8 @@ With **TeaForResource** you can automatically generate this static class and oth
 1. Clone the project
 2. Open the Visual Studio Solution file (*TeaForResource.sln*)
 3. Run T4 Template generation (e.g. from VS menu: Build->Transform All T4 Templates)
-4. Check the generated files for the Sample Resources (*[\Resources\ResourceKeys.generated.cs](https://github.com/SoftwareWizard/TeaForResource/blob/master/docs/images/ResourceKeys.generated.cs.png)*, *[\Typescript\text.resources.generated.ts](https://github.com/SoftwareWizard/TeaForResource/blob/master/docs/images/text.resources.generated.ts.png)*)
+4. Check the generated files for the Sample Resources  
+ (*[\Resources\ResourceKeys.generated.cs](https://github.com/SoftwareWizard/TeaForResource/blob/master/docs/images/ResourceKeys.generated.cs.png)*, *[\Typescript\text.resources.generated.ts](https://github.com/SoftwareWizard/TeaForResource/blob/master/docs/images/text.resources.generated.ts.png)*)
 
 ### Use it in your own Project
 
