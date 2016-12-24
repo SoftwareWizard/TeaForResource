@@ -1,9 +1,10 @@
-# TeaForResource
+
+# ![TeaForResourcLogo](SoftwareWizard.TeaForResource/docs/images/logo.png) TeaForResource
 T4 Template Generation for C# Resource Files
 
 ## The Problem
 
-Microsoft provides Resource Files (*.resx) for holding language dependent strings and Visual Studio automatically generates resource class files.  
+Microsoft provides Resource Files (\*.resx) for holding language dependent strings and Visual Studio automatically generates resource class files.  
 With these generated files you can easily access language dependent strings.  
 But if you have to share your language dependent strings over network boundaries you mostly need to transfer individual resource keys as a *Magic string*.  
 This is error prone and annoying in case of type errors.   
@@ -17,7 +18,8 @@ With **TeaForResource** you can automatically generate this static class and oth
 - Easy installation, as you just need to copy some files into your project.
 - It does not pollute your own project.
 - You can modify or extend the templates for your own purposes.
-- Available VS Plugins for T4 Template development (e.g. *T4 Editor from Devart*, Resharper Plugin *TeaFor*)
+- Available Visual Studio Plugins for T4 Template development (e.g. *[T4 Editor from Devart](https://www.devart.com/t4-editor/)*, Resharper Plugin *[TeaFor](https://resharper-plugins.jetbrains.com/packages/ForTea/)* )
+- Automatically regenarate on build
 
 ## Content
 
@@ -85,11 +87,7 @@ language Suffix (e.g. "en" or "en-US" for english).
 In the end it returns a class structure with the most important information from your resource files. 
 (See Output.) 
 
-#### Parameters
-
-- DefaultLanguageSuffix -> Language suffix for your default language.
-
-#### Output
+#### Output Class Diagram
 
 ![Diagram](SoftwareWizard.TeaForResource/docs/images/classDiagram.png)
 
@@ -106,9 +104,12 @@ In the end it returns a class structure with the most important information from
 - Comment -> comment of your resource Entry
 
  
+ # Links
 
-
-
+ [MSDN (T4)](https://msdn.microsoft.com/en-us/library/bb126445.aspx)   
+ [Wikipedia](https://en.wikipedia.org/wiki/Text_Template_Transformation_Toolkit)   
+ [T4 Template Tutorials and Solutions](http://t4-editor.tangible-engineering.com/How-Do-I-With-T4-Editor-Text-Templates.html)   
+ [Pluralsight Course (T4)](https://www.google.ch/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwiNir60xYzRAhUD6CwKHQdSA8sQFggaMAA&url=https%3A%2F%2Fwww.pluralsight.com%2Fcourses%2Ft4-templates&usg=AFQjCNG4s8OCMFP1bfkSqOIi8S1YL9cwBw&bvm=bv.142059868,d.bGg)
 
 
 
