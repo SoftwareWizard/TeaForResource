@@ -61,6 +61,7 @@ namespace <#=        StaticResourceNamespaceName #>
 		public static string <#=                resourceKey #> = "<#=                resourceKey #>";
 <#        } #>
     }
+
 <#    } #>
 
 }

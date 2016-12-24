@@ -23,13 +23,13 @@
     WriteLine("// ------------------------------------------------------------------------------------------------");
 #>
 <#+    // Setting Declarations - edit these in the main <name>.tt file *******************************************************************************
-    string DefaultLanguageCode = string.Empty;
+    public string DefaultLanguageCode = string.Empty;
 
-    string StaticResourceNamespaceName = string.Empty;
-    string ResourcePath = string.Empty;
+    public string StaticResourceNamespaceName = string.Empty;
+    public string ResourcePath = string.Empty;
 
-    string TextResourceModuleName = string.Empty;
-    string TextResourceClassName = string.Empty;
+    public string TextResourceModuleName = string.Empty;
+    public string TextResourceClassName = string.Empty;
 
     // Private variables / constants
 
