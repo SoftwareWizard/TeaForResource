@@ -62,7 +62,6 @@
     <EmbeddedResource Include="Resources\StaticUserInterface\UiEnum.resx" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="docs\ClassDiagram.cd" />
     <None Include="Resources\TeaForResource.Core.ttinclude" />
   </ItemGroup>
   <ItemGroup>
@@ -85,9 +84,7 @@
       <DependentUpon>text.resources.tt</DependentUpon>
     </TypeScriptCompile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="docs\images\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

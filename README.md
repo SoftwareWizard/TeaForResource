@@ -1,5 +1,5 @@
 
-# ![TeaForResourcLogo](SoftwareWizard.TeaForResource/docs/images/logo.png) TeaForResource
+# ![TeaForResourcLogo](docs/images/logo.png) TeaForResource
 T4 Template Generation for C# Resource Files
 
 ## The Problem
@@ -31,7 +31,7 @@ With **TeaForResource** you can automatically generate this static class and oth
 1. Clone the project
 2. Open the Visual Studio Solution file (*TeaForResource.sln*)
 3. Run T4 Template generation (e.g. from VS menu: Build->Transform All T4 Templates)
-4. Check the generated files for the Sample Resources (*\Resources\ResourceKeys.generated.cs*, *\Typescript\text.resources.generated.ts*)
+4. Check the generated files for the Sample Resources (*[\Resources\ResourceKeys.generated.cs](docs/images/ResourceKeys.generated.cs.png)*, *[\Typescript\text.resources.generated.ts](docs/images/text.resources.generated.ts.png)*)
 
 ### Use it in your own Project
 
@@ -85,7 +85,7 @@ In the end it returns a class structure with the most important information from
 
 #### Output Class Diagram
 
-![Diagram](SoftwareWizard.TeaForResource/docs/images/classDiagram.png)
+![Diagram](docs/images/classDiagram.png)
 
 ##### Resource Class
 
