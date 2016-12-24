@@ -5,10 +5,8 @@ T4 Template Generation for C# Resource Files
 ## The Problem
 
 Microsoft provides Resource Files (\*.resx) for holding language dependent strings and Visual Studio automatically generates resource class files. 
-With these generated files you can easily access language dependent strings. But if you have to share your language dependent strings over network boundaries you mostly need to transfer individual resource keys as a *Magic string*.  
-This is error prone and annoying in case of type errors.
-In order to ship arround this problem you can create a static class, thats holds your resource keys and provides you with *intellisense*.  
-But it is a lot of work for creating and maintaining this class.
+With these generated files you can easily access language dependent strings. But if you have to share your language dependent strings over network boundaries you mostly need to transfer individual resource keys as a *magic string*.  
+This is error prone and annoying in case of type errors. In order to ship arround this problem you can create a static class, thats holds your resource keys and provides you with *intellisense*. But it is a lot of work for creating and maintaining this class.
 
 With **TeaForResource** you can automatically generate this static class and other useful files (e.g. typescript) for your purpose.
 
@@ -54,14 +52,14 @@ Adapt the path correctly, for example
 
 ### Settings
 
-Each T4 Template file has a *Settings* section with parameters.
+Each T4 Template file has a *settings* section with parameters.
 
-#### ResourceKeys.t4
+##### ResourceKeys.tt
 
 + ResourcePath -> Path to your resource files (*.resx)
 + StaticResourceNamespaceName -> Namespace of your static resource class
 
-#### text.resources.t4
+##### text.resources.tt
 
 + ResourcePath  -> Path to your resource files (*.resx)
 + TextResourceModuleName -> Module name of your generated typescript file
@@ -83,8 +81,7 @@ The ReadResource Method tries to find all your resource files in the configured 
 It groups them by the resource name itself and then reads these groups for all languages in parallel.   
 As the resource file with the default language by convention contains no suffix, you must specify the
 language Suffix (e.g. "en" or "en-US" for english).   
-In the end it returns a class structure with the most important information from your resource files. 
-(See Output.) 
+In the end it returns a class structure with the most important information from your resource files.  
 
 #### Output Class Diagram
 
@@ -93,17 +90,17 @@ In the end it returns a class structure with the most important information from
 ##### Resource Class
 
 - Name -> Name of your resource file
-- ResourceElements -> List Resource
+- ResourceElements -> List of ResourceElement classes
 
 ##### ResourceElement Class
 
 - ResourceKey -> Resource key from your resx file
 - Text -> Language dependent text of resx file
 - LanguageCode -> Iso language code from your .resx file extension (e.g. xxx.en-US.resx -> en-US)
-- Comment -> comment of your resource Entry
+- Comment -> Comment of your resource Entry
 
- 
- # Links
+---
+# Links
 
  [MSDN (T4)](https://msdn.microsoft.com/en-us/library/bb126445.aspx)   
  [Wikipedia](https://en.wikipedia.org/wiki/Text_Template_Transformation_Toolkit)   
