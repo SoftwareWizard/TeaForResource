@@ -6,7 +6,7 @@ T4 Template Generation for C# Resource Files
 
 Microsoft provides Resource Files (\*.resx) for holding language dependent strings and Visual Studio automatically generates resource class files. 
 With these generated files you can easily access language dependent strings. But if you have to share your language dependent strings over network boundaries you mostly need to transfer individual resource keys as a *magic string*.  
-This is error prone and annoying in case of type errors. In order to ship arround this problem you can create a static class, thats holds your resource keys and provides you with *intellisense*. But it is a lot of work for creating and maintaining this class.
+This is error prone and annoying in case of type errors. In order to ship arround this problem you can create a static class, that stores your resource keys and provides you with intellisense. But it is a lot of work for creating and maintaining this class.
 
 With **TeaForResource** you can automatically generate this static class and other useful files (e.g. typescript) for your purpose.
 
@@ -39,7 +39,7 @@ With **TeaForResource** you can automatically generate this static class and oth
 2. Optionally rename the T4 template files for your needs.
 3. Set the reference path to the core file in your T4 template. (see configuration section)
 3. Adapt configuration parameters in T4 template files. (see configuration section)
-4. Optionally add *.generated.cs, *.generated.ts to your gitignore file
+4. Optionally add *.generated.cs, *.generated.ts to your .gitignore file.
 
 ## Configuration
 
