@@ -3,23 +3,14 @@ T4 Template Generation for C# Resource Files
 
 ## The Problem
 
-Microsoft provides Resource Files (*.resx) for holding language dependent strings.
-Visual Studio automatically generates a resource class file for usage.
-
-With these generated files you can easily access the language dependent strings.
-
-But if you have to share your language dependent strings over network boundaries
-you mostly need to transfer individual Resource Keys as a *Magic string*.
-
-This is error prone and annoying in case of type errors.
-
-In order to ship arround this problem you can create a static class,
-thats holds your resource Keys and provides you with *intellisense*
-
+Microsoft provides Resource Files (*.resx) for holding language dependent strings and Visual Studio automatically generates resource class files.  
+With these generated files you can easily access language dependent strings.  
+But if you have to share your language dependent strings over network boundaries you mostly need to transfer individual resource keys as a *Magic string*.  
+This is error prone and annoying in case of type errors.   
+In order to ship arround this problem you can create a static class, thats holds your resource keys and provides you with *intellisense*.    
 But it is a lot of work for creating and maintaining this class.
 
-With **TeaForResource** you can automatically generate this static class
-and other useful files for your purpose.
+With **TeaForResource** you can automatically generate this static class and other useful files (e.g. typescript) for your purpose.
 
 ## Advantages of T4 Templates
 - T4 Templates are fully integrated in Visual Studio.
@@ -56,14 +47,13 @@ and other useful files for your purpose.
 ### Reference to .ttinclude file
 
 The first line in the T4 Template references the core file.
-`<#@ include file="TeaForResource.Core.ttinclude" #>`
-
+`<#@ include file="TeaForResource.Core.ttinclude" #>`   
 Adapt the path correctly, for example 
 `<#@ include file="$(SolutionDir)\MyProject\Resources\TeaForResource.Core.ttinclude" #>`
 
-### Parameter
+### Settings
 
-Each T4 Template file has a configuration section with parameters.
+Each T4 Template file has a *Settings* section with parameters.
 
 #### ResourceKeys.t4
 
@@ -75,4 +65,53 @@ Each T4 Template file has a configuration section with parameters.
 + ResourcePath  -> Path to your resource files (*.resx)
 + TextResourceModuleName -> Module name of your generated typescript file
 + TextResourceClassName -> Class name of your generated resource class
+
+
+----
+
+# Extensibility
+
+You can also write your own T4 templates and generate individual output,
+by using the *TeaForResource.Core.ttinclude* file.
+
+### TeaForResource.Core.ttinclude
+
+#### Basic functionality
+
+The ReadResource Method tries to find all your resource files in the configured folder(s).  
+It groups them by the resource name itself and then reads these groups for all languages in parallel.   
+As the resource file with the default language by convention contains no suffix, you must specify the
+language Suffix (e.g. "en" or "en-US" for english).   
+In the end it returns a class structure with the most important information from your resource files. 
+(See Output.) 
+
+#### Parameters
+
+- DefaultLanguageSuffix -> Language suffix for your default language.
+
+#### Output
+
+![Diagram](SoftwareWizard.TeaForResource/docs/images/classDiagram.png)
+
+##### Resource Class
+
+- Name -> Name of your resource file
+- ResourceElements -> List Resource
+
+##### ResourceElement Class
+
+- ResourceKey -> Resource key from your resx file
+- Text -> Language dependent text of resx file
+- LanguageCode -> Iso language code from your .resx file extension (e.g. xxx.en-US.resx -> en-US)
+- Comment -> comment of your resource Entry
+
+ 
+
+
+
+
+
+
+
+
 

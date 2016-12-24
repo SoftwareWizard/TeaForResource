@@ -9,10 +9,11 @@
     // Compiling does not regenerate the file(s)!
     // Hint: Before modifing the template install T4 Editor Plugin for VS from Devart and ForTea Resharper Plugin. Have more fun.
     
-    // Main settings **********************************************************************************************************************
-    ResourcePath = @"..\Resources";
-    TextResourceModuleName = "App";
-    TextResourceClassName = "TextResources";
+    // Main settings *************************************************************************************************************
+    ResourcePath = @"..\Resources";                                 // Path to your resource files (*.resx)
+    TextResourceModuleName = "App";                                 // Module name of your generated typescript file
+    TextResourceClassName = "TextResources";                        // Class name of your generated resource class
+    DefaultLanguageCode = string.Empty;                             // not used as there will be no texts generated
     
     // ##########################################################################################################################
 #>

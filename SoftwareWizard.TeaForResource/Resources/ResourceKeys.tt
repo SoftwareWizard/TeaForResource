@@ -9,9 +9,10 @@
     // Compiling does not regenerate the file(s)!
     // Hint: Before modifing the template install T4 Editor Plugin for VS from Devart and ForTea Resharper Plugin. Have more fun.
     
-    // Main settings **********************************************************************************************************************
-    StaticResourceNamespaceName = "ResourceGenerator.Resources";
-    ResourcePath = @"";
+    // Main settings ************************************************************************************************************
+    ResourcePath = @"";                                             // path to your resource files
+    StaticResourceNamespaceName = "ResourceGenerator.Resources";    // Namespace for your static class
+    DefaultLanguageCode = string.Empty;                             // not used as there will be no texts generated
 
     // ##########################################################################################################################
 #>
