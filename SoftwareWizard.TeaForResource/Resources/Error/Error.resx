@@ -120,4 +120,7 @@
   <data name="ElementNotFound" xml:space="preserve">
     <value>Element was not found.</value>
   </data>
+  <data name="GerhardAvailable" xml:space="preserve">
+    <value>Gerhard is available</value>
+  </data>
 </root>
